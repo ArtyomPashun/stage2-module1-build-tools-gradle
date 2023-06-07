@@ -2,14 +2,11 @@ package com.epam.utils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        if (str.isEmpty() || str.equals("null")) {
-            return false;
+        if (org.apache.commons.lang3.StringUtils.isNumeric(str)) {
+            int num = Integer.parseInt(str);
+            return num > 0;
         } else {
-            return Double.parseDouble(str) > 0;
+            return false;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(StringUtils.isPositiveNumber("null"));
     }
 }

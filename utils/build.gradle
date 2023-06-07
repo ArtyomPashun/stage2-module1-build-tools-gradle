@@ -22,7 +22,7 @@ publishing {
     publications {
         maven(MavenPublication) {
 // provide groupId
-            group = 'com.mjcschool'
+            groupId = 'com.mjcschool'
 // provide artifactId
             artifactId = 'utils'
 // provide version
@@ -41,9 +41,13 @@ dependencies {
 
 jar {
     manifest {
-        //provide manifest with such attributes as 'Implementation-Title', 'Implementation-Version'
-        attributes('Implementation-Title': project.name,
-                'Implementation-Version': project.version)
+        attributes(
+                'Implementation-Title': 'Utils',
+                'Main-Class': 'com.epam.utils.StringUtils',
+                'Implementation-Version': '1.3.5'
+        )
+        baseName 'utils'
+        version '1.3.5'
     }
 }
 
