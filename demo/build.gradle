@@ -1,4 +1,10 @@
 //add everything here
+group = 'com.mjcschool'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
 
 test {
     useJUnitPlatform()
